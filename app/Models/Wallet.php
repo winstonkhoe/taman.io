@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Model
+class Wallet extends Model
 {
     use HasFactory;
-    protected $table = 'artists';
+
+    protected $table = 'wallets';
 
     public function user(){
         return $this->hasOne(User::class, 'id', 'user_id');
-    }
-    public function image(){
-        return $this->hasOne(Image::class, 'id', 'image_id');
     }
 }

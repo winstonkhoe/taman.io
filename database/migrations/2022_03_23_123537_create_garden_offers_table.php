@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('artists', function (Blueprint $table) {
+        Schema::create('garden_offers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->bigInteger('user_id');
-            $table->bigInteger('image_id');
+            $table->unsignedBigInteger('design_id');
+            $table->foreign('design_id')->references('id')->on('designs')->onDelete('cascade');
+            $table->unsignedBigInteger('seller_id');
+            $table->foreign('seller_id')->references('id')->on('sellers')->onDelete('cascade');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artists');
+        Schema::dropIfExists('garden_offers');
     }
 };

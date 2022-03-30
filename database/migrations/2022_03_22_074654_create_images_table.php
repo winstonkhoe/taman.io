@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('design_id');
+            $table->foreign('design_id')->references('id')->on('designs')->onDelete('cascade');
             $table->string('filename');
             $table->timestamps();
         });

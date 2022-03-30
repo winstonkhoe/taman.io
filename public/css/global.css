@@ -1,0 +1,58 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --background-color: #c3dbd2;
+    --main-green-light: rgb(196, 241, 223);
+    --main-green: rgb(102, 164, 148);
+    --main-green-darker: rgb(1, 107, 77);
+    --main-green-darker-bold: rgb(2, 72, 62);
+    --main-nav-color: rgb(227, 240, 190);
+    --main-nav-darker-color: rgb(227, 240, 190);
+    /* --main-nav-color: rgb(7, 27, 11); */
+}
+
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-green-darker);
+}
+
+.hyperlink {
+    text-decoration: none;
+    color: var(--main-green);
+    font-weight: 800;
+}
+
+.hyperlink:hover {
+    color: var(--main-green-darker-bold);
+    text-decoration: none;
+}
+
+.icon-input {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar {
+    margin-top: 5px;
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-green-darker-bold);
+    /* outline: slategrey solid 1px; */
+    border-radius: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--main-green-light);
+    border-radius: 15px;
+  }
+
+.header {
+    color: var(--main-green-darker-bold);
+}

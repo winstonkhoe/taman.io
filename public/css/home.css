@@ -1,0 +1,70 @@
+.background {
+    background-color: var(--background-color);
+}
+
+.product-card {
+    height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02),
+        0 8px 10px rgba(0, 0, 0, 0.03),
+        0 16px 10px rgba(0, 0, 0, 0.04),
+        0 26px 18px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.login-card {
+    /* background-color: rebeccapurple; */
+
+
+}
+
+.login-input {
+    background-color: var(--main-green);
+    border-radius: 25px;
+    color: #FFF;
+}
+
+.login-input input {
+    background-color: transparent;
+    outline: none;
+}
+
+.login-input input::placeholder {
+    color: #FFF;
+}
+
+.login-btn {
+    border-radius: 25px;
+    background-color: var(--main-green);
+    color: #FFF;
+    transition: all 0.5s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: var(--main-green-darker);
+}
+
+/* .hyperlink {
+} */
+
+.register-select {
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+}
+
+.register-textarea {
+    appearance: none;
+    outline: none;
+    /* background-color: rgba(255, 255, 255, 0.493); */
+    background-color: transparent;
+    color: #FFF;
+    resize: none;
+    /* border-radius: 25px; */
+}
+
+.register-textarea::placeholder {
+    color: #FFF;
+}

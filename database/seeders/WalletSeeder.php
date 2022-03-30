@@ -7,7 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ArtistSeeder extends Seeder
+class WalletSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,22 +16,19 @@ class ArtistSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('artists')->insert([
-            'name' => 'Winstonsy',
+        DB::table('wallets')->insert([
             'user_id' => '1',
-            'image' => 'monstera.jpg',
+            'balance' => '0',
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
-        DB::table('artists')->insert([
-            'name' => 'Ficasy',
+        DB::table('wallets')->insert([
             'user_id' => '2',
-            'image' => 'monstera.jpg',
+            'balance' => '0',
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
-        DB::table('artists')->insert([
-            'name' => 'Delvinsy',
+        DB::table('wallets')->insert([
             'user_id' => '3',
-            'image' => 'monstera.jpg',
+            'balance' => '0',
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
     }
