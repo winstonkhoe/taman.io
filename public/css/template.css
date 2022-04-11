@@ -12,15 +12,17 @@ nav {
 
 .nav-item {
     display: flex;
+    align-items: center;
     justify-content: center;
     /* width: 100%; */
     padding: 10px 0;
     margin: 0 25px;
+    color: var(--main-green);
 }
 
 .nav-item:hover {
     border-radius: 20px;
-    background-color: #FFF;
+    /* background-color: #FFF; */
 }
 
 .nav-item.active {

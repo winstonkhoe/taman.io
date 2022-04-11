@@ -1,0 +1,66 @@
+.summary-separator {
+    background-color: var(--main-green-darker);
+}
+
+.br-card {
+    border-radius: 10px;
+}
+
+.container {
+    outline: 2px solid rgb(88, 102, 71, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    cursor: pointer;
+    color: var(--main-green);
+    background-color: rgb(88, 102, 71, 0.3);
+}
+
+.summary:hover {
+    background-color: #FFF;
+}
+
+button {
+    border: none;
+    background-color: var(--main-green);
+    color: #FFF;
+    padding: 15px 0;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--main-green-darker);
+}
+
+*:focus {
+    outline: 1px solid var(--main-green);
+}
+
+input[type="radio"]:focus {
+    outline-width: 0px;
+}
+.constructor-option input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.constructor-option input:checked ~.container {
+    outline-color: var(--main-green-darker);
+    outline-width: 1px;
+    box-shadow:
+        0px 0px 40px rgba(0, 0, 0, 0.06),
+        0px 0px 40px rgba(0, 0, 0, 0.04),
+        0px 0px 40px rgba(0, 0, 0, 0.03),
+        0px 0px 40px rgba(0, 0, 0, 0.02);
+}

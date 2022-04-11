@@ -1,0 +1,31 @@
+.seller-nav a {
+    flex: 1 1 auto;
+    margin-left: 10px;
+}
+
+.seller-nav a:first-child {
+    margin-left: 0px;
+}
+
+.seller-nav button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--main-green-darker);
+    transition: all .3s ease-in-out;
+}
+
+.seller-nav button:hover {
+    background-color: var(--main-green-darker);
+    color: #FFF;
+}
+
+.seller-nav button.active{
+    background-color: var(--soft-green);
+    color: #FFF;
+}
+
+.seller-nav button.active:hover {
+    background-color: var(--main-green-darker);
+}
+
+

@@ -14,6 +14,9 @@ class Design extends Model
         return $this->belongsTo(Artist::class);
     }
     public function image(){
-        return $this->hasOne(Image::class);
+        return $this->hasOne(DesignImage::class);
+    }
+    public function contractors(){
+        return $this->hasMany(GardenOffer::class);
     }
 }

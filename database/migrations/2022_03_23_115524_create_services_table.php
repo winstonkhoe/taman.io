@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('description');
             $table->integer('estimation_day');
             $table->bigInteger('price');
             $table->unsignedBigInteger('seller_id');

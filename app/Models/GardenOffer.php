@@ -11,9 +11,9 @@ class GardenOffer extends Model
     protected $table = 'garden_offers';
 
     public function design(){
-        return $this->hasOne(Seller::class, 'id', 'design_id');
+        return $this->belongsTo(Design::class);
     }
     public function seller(){
-        return $this->hasOne(Seller::class, 'id', 'seller_id');
+        return $this->belongsTo(Seller::class);
     }
 }

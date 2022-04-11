@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TransactionHeader;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -11,17 +12,17 @@ class UserController extends Controller
 {
     public function index(Request $request){
         $data = User::all();
-        return view('login', compact('data'));
+        return view('user.login', compact('data'));
     }
 
     public function register(Request $request){
         $data = User::all();
-        return view('register', compact('data'));
+        return view('user.register', compact('data'));
     }
 
     public function profile(Request $request){
-        $data = User::all();
-        return view('profile', compact('data'));
+        $data = auth()->user();
+        return view('user.profile', compact('data'));
     }
 
     public function manageUser(Request $request){
@@ -69,23 +70,25 @@ class UserController extends Controller
             'email'=>$email,
             'password'=>$pass
         ])) {
-            if($request->filled('remember-me'))
-            {
+            if($request->remember_me) {
                 $userId = auth()->user()->id;
                 Cookie::queue('id', $userId, 60);
-            }
-            else
-            {
-                if(!nullOrEmptyString(Cookie::get('id')))
-                {
-                    Cookie::queue(Cookie::unqueue('id'));
-                }
+            } else {
+                if(Cookie::get('id'))
+                    Cookie::forget('id');
             }
             return redirect('/');
         }
         else {
             return redirect()->back();
         }
+    }
+
+    public function transaction(Request $request) {
+        // $data = DB::table('transaction_headers')->where('user_id', '=', auth()->user()->id)->get()->sortByDesc('created_at');
+        $data = TransactionHeader::where('user_id', '=', auth()->user()->id)->orderby('created_at', 'DESC')->get();
+        // dd($data);
+        return view('user.transaction', compact('data'));
     }
 
     public function logout() {

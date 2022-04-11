@@ -7,7 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ImageSeeder extends Seeder
+class DesignImageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -28,17 +28,17 @@ class ImageSeeder extends Seeder
         //     'filename' => 'trash.jpg',
         //     'created_at' => Carbon::now()->toDateTimeString(),
         // ]);
-        DB::table('images')->insert([
+        DB::table('design_images')->insert([
             'filename' => 'side-garden_type-A.jpg',
             'created_at' => Carbon::now()->toDateTimeString(),
             'design_id' => '1'
         ]);
-        DB::table('images')->insert([
+        DB::table('design_images')->insert([
             'filename' => 'back-garden_type-U.jpg',
             'created_at' => Carbon::now()->toDateTimeString(),
             'design_id' => '2'
         ]);
-        DB::table('images')->insert([
+        DB::table('design_images')->insert([
             'filename' => 'back-garden_type-Z.jpg',
             'created_at' => Carbon::now()->toDateTimeString(),
             'design_id' => '3'

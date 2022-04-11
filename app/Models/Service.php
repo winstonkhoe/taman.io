@@ -14,4 +14,7 @@ class Service extends Model
     public function seller(){
         return $this->hasOne(Seller::class, 'id', 'seller_id');
     }
+    public function image(){
+        return $this->hasOne(ServiceImage::class);
+    }
 }

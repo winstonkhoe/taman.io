@@ -11,17 +11,17 @@ class Seller extends Model
     protected $table = 'sellers';
 
     public function user(){
-        return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->hasOne(User::class);
     }
     public function image(){
-        return $this->hasOne(Image::class, 'id', 'image_id');
+        return $this->hasOne(Image::class);
     }
 
     public function services(){
-        return $this->hasMany(Service::class, 'seller_id', 'id');
+        return $this->hasMany(Service::class);
     }
 
     public function garden_offers(){
-        return $this->hasMany(GardenOffer::class, 'seller_id', 'id');
+        return $this->hasMany(GardenOffer::class);
     }
 }

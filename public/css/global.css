@@ -6,8 +6,10 @@
     --main-green: rgb(102, 164, 148);
     --main-green-darker: rgb(1, 107, 77);
     --main-green-darker-bold: rgb(2, 72, 62);
-    --main-nav-color: rgb(227, 240, 190);
+    --main-nav-color: rgb(158, 173, 151, 0.5);
     --main-nav-darker-color: rgb(227, 240, 190);
+    --soft-background: rgb(222, 222, 222, 0.4);
+    --soft-green:rgba(134, 172, 156, 0.688);
     /* --main-nav-color: rgb(7, 27, 11); */
 }
 
@@ -18,6 +20,11 @@
 a {
     text-decoration: none;
     color: var(--main-green-darker);
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .hyperlink {
@@ -55,4 +62,110 @@ a {
 
 .header {
     color: var(--main-green-darker-bold);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+
+    /* -webkit-box-shadow: 0 0 0 30px transparent inset !important; */
+    -webkit-box-shadow: 0 0 0 30px #FFF inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.input-box {
+    padding: 10px 15px;
+    background-color: #FFF;
+    /* background-color: var(--main-green); */
+    border-radius: 5px;
+    color: #000;
+}
+
+.input-box input,textarea {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #000;
+}
+
+.input-box input::placeholder, textarea::placeholder {
+    color: rgba(0, 0, 0, .6);
+}
+
+.soft-bg {
+    background-color: var(--soft-background);
+}
+
+button {
+    border: none;
+    background-color: var(--main-green);
+    color: #FFF;
+    padding: 15px 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--main-green-darker);
+}
+
+.nav-item > li {
+    position: relative;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    left: 70px;
+    width: 200px;
+    min-height: 150px;
+    height: auto;
+    color: #FFF;
+    /* right: 0; */
+    /* display: none; */
+    background-color: var(--main-green-darker);
+  }
+
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  /* ul li ul li {
+    clear: both;
+    width: 100%;
+  } */
+
+.container {
+    outline: 2px solid rgb(88, 102, 71, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    cursor: pointer;
+    color: var(--main-green);
+    background-color: rgb(88, 102, 71, 0.3);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

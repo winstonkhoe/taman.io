@@ -13,7 +13,4 @@ class Artist extends Model
     public function user(){
         return $this->hasOne(User::class, 'id', 'user_id');
     }
-    public function image(){
-        return $this->hasOne(Image::class, 'id', 'image_id');
-    }
 }

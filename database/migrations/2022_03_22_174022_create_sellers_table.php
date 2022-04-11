@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('city');
             $table->string('address');
+            $table->integer('reputation_point');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('image')->nullable();
