@@ -60,7 +60,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="summary container br-card w-25">
+                <div class="summary container br-card w-25 mb-5">
                     <div class="d-flex flex-column p-3">
 
                         <?php
@@ -69,22 +69,6 @@
                                 array_push($contractors, $value->seller->id);
                             };
                         ?>
-                        @if ((auth()->user()->artist && auth()->user()->artist->id == $data->artist_id) || (auth()->user()->seller && in_array(auth()->user()->seller->id, $contractors)))
-                            @if (auth()->user()->artist && auth()->user()->artist->id == $data->artist_id)
-                                <button class="mt-5" type="submit">Modify Design</button>
-                                <button class="mt-5" type="submit">Remove Design</button>
-                            @endif
-                            @if(auth()->user()->seller && in_array(auth()->user()->seller->id, $contractors))
-                                <a href="contractor/quit/design/{{$data->id}}">
-                                    <button class="mt-5" type="submit">Quit From Contractor Geng</button>
-                                </a>
-                                @elseif(auth()->user()->seller && !in_array(auth()->user()->seller->id, $contractors))
-                                <a href="contractor/join/design/{{$data->id}}">
-                                    <button class="mt-5" type="submit">Join Contractor Geng</button>
-                                </a>
-                            @endif
-                        {{-- @else --}}
-                        @endif
                             <h6 class="header" style="font-size: 1.3rem; font-weight: 700;">Summary</h6>
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="header" style="font-size: 1rem; font-weight: 400;">Biaya Design</h6>
@@ -101,7 +85,23 @@
                             </div>
 
                             <button class="mt-5" type="submit">Start Building</button>
-
+                            @if ((auth()->user()->artist && auth()->user()->artist->id == $data->artist_id) || (auth()->user()->seller && in_array(auth()->user()->seller->id, $contractors)))
+                                @if (auth()->user()->artist && auth()->user()->artist->id == $data->artist_id)
+                                    <button class="mt-5">Modify Design</button>
+                                    <button class="mt-2">Remove Design</button>
+                                @endif
+                                @if(auth()->user()->seller && in_array(auth()->user()->seller->id, $contractors))
+                                    <a href="/contractor/quit/design/{{$data->id}}" class="mt-2 w-100 d-flex">
+                                        <button class="flex-fill" type="button">Quit From Contractor Geng</button>
+                                        {{-- <button class="mt-5" type="text">Quit From Contractor Geng</button> --}}
+                                    </a>
+                                    @elseif(auth()->user()->seller && !in_array(auth()->user()->seller->id, $contractors))
+                                    <a href="/contractor/join/design/{{$data->id}}" class="mt-2 w-100 d-flex">
+                                        <button class="flex-fill" type="button">Join Contractor Geng</button>
+                                        {{-- <button class="mt-5" type="text">Join Contractor Geng</button> --}}
+                                    </a>
+                                @endif
+                            @endif
                     </div>
 
                 </div>

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 class DesignController extends Controller
 {
     public function index($id){
-        $data = Design::all()->find($id);
+        $data = Design::find($id);
         return view('design.index', compact('data'));
     }
 
@@ -33,6 +33,7 @@ class DesignController extends Controller
     public function addPage(Request $request) {
         return view ('design.add');
     }
+    
     public function add(Request $request) {
         $data = $request->validate([
             'name' => 'required|string',

@@ -20,7 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('seller_id');
             $table->foreign('seller_id')->references('id')->on('sellers')->onDelete('cascade');
             $table->bigInteger('price');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('valid_to')->nullable();
         });
     }
 

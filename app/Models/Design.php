@@ -17,6 +17,6 @@ class Design extends Model
         return $this->hasOne(DesignImage::class);
     }
     public function contractors(){
-        return $this->hasMany(GardenOffer::class);
+        return $this->hasMany(GardenOffer::class)->where('valid_to', '=', null);
     }
 }

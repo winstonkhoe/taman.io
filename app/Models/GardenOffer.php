@@ -9,6 +9,7 @@ class GardenOffer extends Model
 {
     use HasFactory;
     protected $table = 'garden_offers';
+    public $timestamps = false;
 
     public function design(){
         return $this->belongsTo(Design::class);

@@ -40,7 +40,8 @@ Route::get('/artist', [ArtistController::class, 'index']);
 Route::get('/artist/edit-profile', [ArtistController::class, 'profile']);
 Route::post('/artist/edit-profile', [ArtistController::class, 'update']);
 
-Route::get('/contractor/join/design/{id}', [GardenOfferController::class, 'add']);
+Route::get('/contractor/join/design/{id}', [GardenOfferController::class, 'addPage']);
+Route::post('/contractor/join/design/{id}', [GardenOfferController::class, 'add']);
 Route::get('/contractor/quit/design/{id}', [GardenOfferController::class, 'remove']);
 
 

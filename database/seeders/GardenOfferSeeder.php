@@ -20,57 +20,57 @@ class GardenOfferSeeder extends Seeder
             'design_id' => '1',
             'seller_id' => '1',
             'price' => '5499000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '1',
             'seller_id' => '2',
             'price' => '4500000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '1',
             'seller_id' => '3',
             'price' => '4799000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
 
         DB::table('garden_offers')->insert([
             'design_id' => '2',
             'seller_id' => '1',
             'price' => '7199000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '2',
             'seller_id' => '2',
             'price' => '5749000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '2',
             'seller_id' => '3',
             'price' => '6999000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
 
         DB::table('garden_offers')->insert([
             'design_id' => '3',
             'seller_id' => '1',
             'price' => '7300000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '3',
             'seller_id' => '2',
             'price' => '8199000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
         DB::table('garden_offers')->insert([
             'design_id' => '3',
             'seller_id' => '3',
             'price' => '10499000',
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'created_at' => now(),
         ]);
     }
 }
