@@ -9,11 +9,11 @@
 @endsection('style')
 
 @section('content')
-    <script src="/js/search.js" defer></script>
-    <link rel="stylesheet" href='css/product.css'>
-    <div class="container-fluid d-flex flex-column px-5 background min-vh-100 pt-5 align-items-center" style="">
-        <div class="row mb-5">
-            @for($i = 0; $i < count($data); $i++)
+<script src="/js/search.js" defer></script>
+<link rel="stylesheet" href='css/product.css'>
+<div class="container-fluid d-flex flex-column px-5 background min-vh-100 pt-5 align-items-center" style="">
+    <div class="d-flex flex-column mb-5">
+        @for($i = 0; $i < count($data); $i++)
                 <div class="product-card  ms-4 mt-4 py-4 px-5" style="height: 300px; width: 800px">
                     <span class="d-flex flex-column flex-grow-1">
                         <div class="w-100 h-25 d-flex align-items-center">
@@ -25,7 +25,7 @@
                                 @endif
                             </h6>
                             <p class="m-0 ms-3 p-0" style="font-size: 1rem; font-weight: 400;">
-                                {{ \Carbon\Carbon::parse($data[$i]->created_at)->format('d M Y')}}
+                                {{ \Carbon\Carbon::parse($data[$i]->created_at)->format('d M Y, H:i')}}
                             </p>
                             {{-- <p>{{$data[$i]->user}}</p> --}}
                         </div>

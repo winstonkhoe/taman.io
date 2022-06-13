@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class TransactionHeader extends Model
 {
     use HasFactory;
+    protected $table = 'transaction_headers';
     public $timestamps = false;
 
     public function garden(){

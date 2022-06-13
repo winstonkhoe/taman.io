@@ -70,7 +70,7 @@ class ServiceController extends Controller
             $image->save();
         }
 
-        return redirect()->back();
+        return redirect("/transactions");
     }
 
     public function managePage(Request $request) {
