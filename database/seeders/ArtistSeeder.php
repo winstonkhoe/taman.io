@@ -17,21 +17,21 @@ class ArtistSeeder extends Seeder
     public function run()
     {
         DB::table('artists')->insert([
-            'name' => 'Winstonsy',
+            'name' => 'WinWin S.',
             'user_id' => '1',
             'reputation_point' => '0',
             'image' => 'monstera.jpg',
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
         DB::table('artists')->insert([
-            'name' => 'Ficasy',
+            'name' => 'JayV0n',
             'user_id' => '2',
             'reputation_point' => '0',
             'image' => 'monstera.jpg',
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
         DB::table('artists')->insert([
-            'name' => 'Delvinsy',
+            'name' => 'IniWilliam',
             'user_id' => '3',
             'reputation_point' => '0',
             'image' => 'monstera.jpg',

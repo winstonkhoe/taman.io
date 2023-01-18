@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('title')
-<title>Register | Taman.io</title>
+<title>Register | TamanKhoe</title>
 @endsection('title')
 
 @section('style')
@@ -13,12 +13,12 @@
         <div class="card position-absolute login-wrapper" style="height: 700px">
             <div class="w-100 h-100 login-card overflow-hidden">
             <div class="w-100 h-100 mx-auto d-flex flex-column align-items-center py-5">
-                {{-- <img class="w-auto mb-4" src={{asset('/assets/logo_full.png')}} alt="" style="object-fit: contain; object-position: center; width: 20%"> --}}
+                {{-- <img class="w-auto mb-4" src={{asset('/assets/tamankhoe.png')}} alt="" style="object-fit: contain; object-position: center; width: 20%"> --}}
                 <form class="w-100 h-100" action="" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                 <div class="w-100 h-75 d-flex flex-column align-items-center" style="height: 75%">
                     <h3 class="m-0 header">REGISTER</h3>
-                    <img class="my-3" src={{asset('/assets/logo_full.png')}} alt="" style="object-fit: contain; object-position: center; width: 120px; height: 120px;">
+                    <img class="my-3" src={{asset('/assets/tamankhoe.png')}} alt="" style="object-fit: contain; object-position: center; width: 120px; height: 120px;">
                     <div class="w-75 py-2 login-input mb-2" >
                         <div class="h-100 w-100 px-3 d-flex align-items-center" >
                             <div class="icon-input d-flex align-items-center">
@@ -86,7 +86,7 @@
     {{-- <div class="min-h-screen flex align-items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
-                <img class="mx-auto h-25 w-auto" src={{asset('/assets/logo_full.jpeg')}} alt="tanam.io">
+                <img class="mx-auto h-25 w-auto" src={{asset('/assets/tamankhoe.png')}} alt="tanam.io">
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Sign in to your account
                 </h2>

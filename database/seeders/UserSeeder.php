@@ -45,7 +45,7 @@ class UserSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'name' => 'admin',
-            'email' => 'admin@tanamio.com',
+            'email' => 'admin@tamankhoe.com',
             'password' => bcrypt('admin'),
             'phone' => '0000000000',
             'address' => 'Admin Road',

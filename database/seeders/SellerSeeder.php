@@ -17,7 +17,7 @@ class SellerSeeder extends Seeder
     public function run()
     {
         DB::table('sellers')->insert([
-            'name' => 'WinPower',
+            'name' => 'Kemakmooran',
             'phone' => '08123871273',
             'city' => 'Jakarta',
             'address' => 'Jl Pluit Karang Asin No.1',
@@ -27,7 +27,7 @@ class SellerSeeder extends Seeder
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
         DB::table('sellers')->insert([
-            'name' => 'FicaKaropi',
+            'name' => 'Sinar J.',
             'phone' => '08123812314',
             'city' => 'Semarang',
             'address' => 'Jl Semarang Raya No.2',
@@ -37,7 +37,7 @@ class SellerSeeder extends Seeder
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
         DB::table('sellers')->insert([
-            'name' => 'DelviQueen',
+            'name' => 'Bangun T.',
             'phone' => '08423819237',
             'city' => 'Tangerang',
             'address' => 'Jl Raya Tangerang No.2',

@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('title')
-<title>Login | Taman.io</title>
+<title>Login | TamanKhoe</title>
 @endsection('title')
 
 @section('style')
@@ -20,7 +20,7 @@
             {{csrf_field()}}
             <div class="w-100 h-100 mx-auto d-flex flex-column align-items-center justify-content-center py-5">
                 <h3 class="header">LOGIN</h3>
-                <img class="my-5" src={{asset('/assets/logo_full.png')}} alt="" style="object-fit: contain; object-position: center; width: 150px; height: 150px;">
+                <img class="my-5" src={{asset('/assets/tamankhoe.png')}} alt="" style="object-fit: contain; object-position: center; width: 150px; height: 150px;">
                 <div class="w-100 h-75 d-flex flex-column align-items-center" style="height: 75%">
                     <div class="w-75 py-3 login-input mb-3" >
                         <div class="h-100 w-100 px-3 d-flex align-items-center" >
@@ -50,7 +50,7 @@
     {{-- <div class="min-h-screen d-flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
-                <img class="mx-auto h-25 w-auto" src={{asset('/assets/logo_full.jpeg')}} alt="tanam.io">
+                <img class="mx-auto h-25 w-auto" src={{asset('/assets/tamankhoe.png')}} alt="tanam.io">
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Sign in to your account
                 </h2>

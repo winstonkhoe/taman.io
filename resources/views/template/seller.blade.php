@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('title')
-<title>Seller | Taman.io</title>
+<title>Seller | TamanKhoe</title>
 @endsection('title')
 
 @section('style')

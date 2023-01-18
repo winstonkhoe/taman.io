@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('title')
-<title>Artist | Taman.io</title>
+<title>Artist | TamanKhoe</title>
 @endsection('title')
 
 @section('style')

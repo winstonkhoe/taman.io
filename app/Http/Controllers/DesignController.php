@@ -17,14 +17,14 @@ class DesignController extends Controller
         return view('design.index', compact('data'));
     }
 
-    public function checkout($id){
+    public function checkout(Request $request, $id){
         $header = new TransactionHeader;
         $header->user_id = auth()->user()->id;
         $header->created_at = now();
         $header->save();
 
         $detail = new TransactionDetailGarden;
-        $detail->garden_offer_id = $id;
+        $detail->garden_offer_id = $request->offer_id;
         $detail->transaction_header_id = $header->id;
         $detail->save();
         return redirect("/transactions");
