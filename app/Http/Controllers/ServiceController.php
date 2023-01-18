@@ -23,19 +23,6 @@ class ServiceController extends Controller
         return view('service.index', compact('data'));
     }
 
-    public function checkout($id){
-        $header = new TransactionHeader();
-        $header->user_id = auth()->user()->id;
-        $header->created_at = now();
-        $header->save();
-
-        $detail = new TransactionDetailService();
-        $detail->service_id = $id;
-        $detail->transaction_header_id = $header->id;
-        $detail->save();
-        return redirect()->back();
-    }
-
     public function addPage(Request $request) {
         return view ('service.add');
     }

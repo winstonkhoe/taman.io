@@ -5,6 +5,7 @@ use App\Http\Controllers\DesignController;
 use App\Http\Controllers\GardenOfferController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ServiceController::class, 'index']);
 Route::get('/design/{id}', [DesignController::class, 'index']);
-Route::post('/design/{id}', [DesignController::class, 'checkout']);
+Route::post('/design/{id}', [TransactionController::class, 'checkoutDesign']);
 Route::get('/service/{id}', [ServiceController::class, 'detail']);
-Route::post('/service/{id}', [ServiceController::class, 'checkout']);
+Route::post('/service/{id}', [TransactionController::class, 'checkoutService']);
 
 Route::get('/add-design', [DesignController::class, 'addPage']);
 Route::post('/add-design', [DesignController::class, 'add']);
